@@ -3,16 +3,17 @@
 
 Summary:	K Desktop Environment - Frontend to Mathematical Software
 Name:		cantor
-Version:	4.7.0
+Version:	4.7.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	c1a9da755c1ec4ff8a9a736e3c0ff304
+# Source0-md5:	b2f1a3ae4fdc0f04f0cd250a8dbd6d76
 URL:		http://www.kde.org/
 BuildRequires:	R
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	libspectre-devel
+Obsoletes:	kde4-kdeedu-cantor < 4.7.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
