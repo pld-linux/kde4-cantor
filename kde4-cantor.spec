@@ -2,18 +2,19 @@
 %define		orgname		cantor
 
 Summary:	K Desktop Environment - Frontend to Mathematical Software
-Name:		cantor
-Version:	4.7.3
+Name:		kde4-cantor
+Version:	4.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	910a2e814df1a61d77f0be06c6a9f1ab
+# Source0-md5:	aa2e06f133615d44143cf6ad6da52aaf
 URL:		http://www.kde.org/
 BuildRequires:	R
 BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	libspectre-devel
 Obsoletes:	kde4-kdeedu-cantor < 4.6.99
+Obsoletes:	cantor < 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,6 +27,7 @@ Summary:	cantor development files
 Summary(pl.UTF-8):	Pliki dla programistów cantor
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	cantor-devel < 4.8.0
 
 %description devel
 cantor development files.
@@ -50,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%find_lang %{name} --with-kde
+%find_lang %{orgname} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,10 +60,13 @@ rm -rf $RPM_BUILD_ROOT
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/cantor
 %attr(755,root,root) %{_bindir}/cantor_rserver
+%attr(755,root,root) %{_libdir}/kde4/cantor_qalculatebackend.so
+%attr(755,root,root) %{_libdir}/kde4/cantor_qalculateplotassistant.so
+%attr(755,root,root) %{_libdir}/kde4/cantor_scilabbackend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_creatematrixassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_differentiateassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_eigenvaluesassistant.so
@@ -89,15 +94,19 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
 %{_datadir}/config.kcfg/maximabackend.kcfg
+%{_datadir}/config.kcfg/qalculatebackend.kcfg
 %{_datadir}/config.kcfg/sagebackend.kcfg
+%{_datadir}/config.kcfg/scilabbackend.kcfg
 %{_datadir}/config.kcfg/rserver.kcfg
 %{_datadir}/config/cantor*.knsrc
 %{_iconsdir}/hicolor/16x16/apps/cantor.png
 %{_iconsdir}/hicolor/32x32/apps/cantor.png
 %{_iconsdir}/hicolor/48x48/apps/cantor.png
 %{_iconsdir}/hicolor/48x48/apps/maximabackend.png
+%{_iconsdir}/hicolor/48x48/apps/qalculatebackend.png
 %{_iconsdir}/hicolor/48x48/apps/rbackend.png
 %{_iconsdir}/hicolor/48x48/apps/sagebackend.png
+%{_iconsdir}/hicolor/48x48/apps/scilabbackend.png
 %{_iconsdir}/hicolor/*x*/apps/octavebackend.png
 %dir %{_datadir}/kde4/services/cantor
 %{_datadir}/kde4/services/cantor/cantor_part.desktop
@@ -111,9 +120,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/cantor/nullbackend.desktop
 %{_datadir}/kde4/services/cantor/plot2dassistant.desktop
 %{_datadir}/kde4/services/cantor/plot3dassistant.desktop
+%{_datadir}/kde4/services/cantor/qalculatebackend.desktop
+%{_datadir}/kde4/services/cantor/qalculateplotassistant.desktop
 %{_datadir}/kde4/services/cantor/rbackend.desktop
 %{_datadir}/kde4/services/cantor/runscriptassistant.desktop
 %{_datadir}/kde4/services/cantor/sagebackend.desktop
+%{_datadir}/kde4/services/cantor/scilabbackend.desktop
 %{_datadir}/kde4/services/cantor/solveassistant.desktop
 %{_datadir}/kde4/servicetypes/cantor_assistant.desktop
 %{_datadir}/kde4/servicetypes/cantor_backend.desktop
