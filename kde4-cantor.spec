@@ -76,6 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/cantor_eigenvectorsassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_integrateassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_invertmatrixassistant.so
+%attr(755,root,root) %{_libdir}/kde4/cantor_kalgebrabackend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_maximabackend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_nullbackend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_plot2dassistant.so
@@ -119,6 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/cantor/eigenvectorsassistant.desktop
 %{_datadir}/kde4/services/cantor/integrateassistant.desktop
 %{_datadir}/kde4/services/cantor/invertmatrixassistant.desktop
+%{_datadir}/kde4/services/cantor/kalgebrabackend.desktop
 %{_datadir}/kde4/services/cantor/maximabackend.desktop
 %{_datadir}/kde4/services/cantor/nullbackend.desktop
 %{_datadir}/kde4/services/cantor/plot2dassistant.desktop
