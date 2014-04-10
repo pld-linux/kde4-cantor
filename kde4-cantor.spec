@@ -3,12 +3,12 @@
 
 Summary:	K Desktop Environment - Frontend to Mathematical Software
 Name:		kde4-cantor
-Version:	4.12.3
+Version:	4.12.4
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	015b765765e428b7cb0056f218e31c55
+# Source0-md5:	5e408b3cf617db5c32cd69c4bb03067f
 URL:		http://www.kde.org/
 BuildRequires:	R
 BuildRequires:	kde4-analitza-devel
