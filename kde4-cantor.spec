@@ -3,12 +3,12 @@
 
 Summary:	K Desktop Environment - Frontend to Mathematical Software
 Name:		kde4-cantor
-Version:	4.12.4
+Version:	4.13.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	5e408b3cf617db5c32cd69c4bb03067f
+# Source0-md5:	c31d026a08796cf48cc3a0db3e71d9fd
 URL:		http://www.kde.org/
 BuildRequires:	R
 BuildRequires:	kde4-analitza-devel
@@ -74,6 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/cantor_differentiateassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_eigenvaluesassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_eigenvectorsassistant.so
+%attr(755,root,root) %{_libdir}/kde4/cantor_importpackageassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_integrateassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_invertmatrixassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_kalgebrabackend.so
@@ -81,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/cantor_nullbackend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_plot2dassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_plot3dassistant.so
+%attr(755,root,root) %{_libdir}/kde4/cantor_python2backend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_rbackend.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_runscriptassistant.so
 %attr(755,root,root) %{_libdir}/kde4/cantor_sagebackend.so
@@ -98,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
 %{_datadir}/config.kcfg/maximabackend.kcfg
+%{_datadir}/config.kcfg/python2backend.kcfg
 %{_datadir}/config.kcfg/qalculatebackend.kcfg
 %{_datadir}/config.kcfg/sagebackend.kcfg
 %{_datadir}/config.kcfg/scilabbackend.kcfg
@@ -107,6 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/32x32/apps/cantor.png
 %{_iconsdir}/hicolor/48x48/apps/cantor.png
 %{_iconsdir}/hicolor/48x48/apps/maximabackend.png
+%{_iconsdir}/hicolor/48x48/apps/pythonbackend.png
 %{_iconsdir}/hicolor/48x48/apps/qalculatebackend.png
 %{_iconsdir}/hicolor/48x48/apps/rbackend.png
 %{_iconsdir}/hicolor/48x48/apps/sagebackend.png
@@ -118,6 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/cantor/differentiateassistant.desktop
 %{_datadir}/kde4/services/cantor/eigenvaluesassistant.desktop
 %{_datadir}/kde4/services/cantor/eigenvectorsassistant.desktop
+%{_datadir}/kde4/services/cantor/importpackageassistant.desktop
 %{_datadir}/kde4/services/cantor/integrateassistant.desktop
 %{_datadir}/kde4/services/cantor/invertmatrixassistant.desktop
 %{_datadir}/kde4/services/cantor/kalgebrabackend.desktop
@@ -125,6 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/cantor/nullbackend.desktop
 %{_datadir}/kde4/services/cantor/plot2dassistant.desktop
 %{_datadir}/kde4/services/cantor/plot3dassistant.desktop
+%{_datadir}/kde4/services/cantor/python2backend.desktop
 %{_datadir}/kde4/services/cantor/qalculatebackend.desktop
 %{_datadir}/kde4/services/cantor/qalculateplotassistant.desktop
 %{_datadir}/kde4/services/cantor/rbackend.desktop
