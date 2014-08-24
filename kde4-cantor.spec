@@ -3,12 +3,12 @@
 
 Summary:	K Desktop Environment - Frontend to Mathematical Software
 Name:		kde4-cantor
-Version:	4.13.2
+Version:	4.14.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	1336883adfeee55d8bff3edee2dc8a0f
+Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
+# Source0-md5:	45ddd9c83b921125449424095817e555
 URL:		http://www.kde.org/
 BuildRequires:	R
 BuildRequires:	kde4-analitza-devel
@@ -96,9 +96,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libcantorlibs.so.?
 %attr(755,root,root) %{_libdir}/libcantor_config.so
 %{_desktopdir}/kde4/cantor.desktop
+%{_datadir}/appdata/cantor.appdata.xml
 %{_datadir}/apps/cantor
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
+%{_datadir}/config.kcfg/kalgebrabackend.kcfg
 %{_datadir}/config.kcfg/maximabackend.kcfg
 %{_datadir}/config.kcfg/python2backend.kcfg
 %{_datadir}/config.kcfg/qalculatebackend.kcfg
